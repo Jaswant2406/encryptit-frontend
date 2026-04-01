@@ -47,7 +47,7 @@ export function AuthPortal({ onLogin }: AuthPortalProps) {
           { 
             theme: 'outline', 
             size: 'large', 
-            width: '300%',
+            width: 300,
             text: 'continue_with',
             shape: 'rectangular'
           }
