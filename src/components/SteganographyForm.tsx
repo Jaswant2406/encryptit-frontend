@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { Upload, Image as ImageIcon, Shield, Download, RefreshCw, CheckCircle2, FileText, AlertCircle, Zap, ShieldAlert } from 'lucide-react';
-import { cn } from '@/src/lib/utils';
-import { embedDataInImage } from '@/src/services/steganographyService';
+import { cn } from '../lib/utils';
+import { embedDataInImage } from '../services/steganographyService';
 import { motion } from 'motion/react';
 
 export function SteganographyForm() {

@@ -9,7 +9,7 @@ import { AuthPortal } from './components/AuthPortal';
 import { View, FileRecord } from './types';
 import { Shield, Lock, Unlock, BarChart3, Files, User, LogOut, Image as ImageIcon, Menu, X, Settings } from 'lucide-react';
 import { FingerprintLogo } from './components/Logo';
-import { cn } from '@/src/lib/utils';
+import { cn } from './lib/utils';
 const API = import.meta.env.VITE_API_URL;
 
 export default function App() {

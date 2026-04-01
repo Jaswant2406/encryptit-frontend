@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Shield, Mail, Lock, User, ArrowRight, RefreshCw, CheckCircle2 } from 'lucide-react';
 import { FingerprintLogo } from './Logo';
-import { cn } from '@/src/lib/utils';
+import { cn } from '../lib/utils';
 const API = import.meta.env.VITE_API_URL;
 
 declare global {

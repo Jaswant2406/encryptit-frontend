@@ -1,7 +1,7 @@
 import React from 'react';
 import { FileText, Download, Trash2, Shield, Lock, MoreVertical, Image as ImageIcon } from 'lucide-react';
-import { FileRecord } from '@/src/types';
-import { cn } from '@/src/lib/utils';
+import { FileRecord } from './types';
+import { cn } from '../lib/utils';
 
 interface FileTableProps {
   files: FileRecord[];

@@ -1,8 +1,8 @@
 import React, { useState, useRef } from 'react';
 import { Upload, Unlock, ShieldAlert, RefreshCw, FileText, CheckCircle2, ChevronDown, Zap, Shield } from 'lucide-react';
-import { cn } from '@/src/lib/utils';
-import { decryptFile } from '@/src/services/cryptoService';
-import { extractDataFromImage } from '@/src/services/steganographyService';
+import { cn } from '../lib/utils';
+import { decryptFile } from '../services/cryptoService';
+import { extractDataFromImage } from '../services/steganographyService';
 import { motion } from 'motion/react';
 
 export function DecryptForm() {

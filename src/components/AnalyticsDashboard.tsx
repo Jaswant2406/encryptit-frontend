@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell, AreaChart, Area, PieChart, Pie } from 'recharts';
 import { Shield, AlertTriangle, CheckCircle, Lock, ShieldCheck, RefreshCw, FileText, Info, Database, Files, Clock, Zap } from 'lucide-react';
-import { auditSecurity } from '@/src/services/aiService';
-import { FileRecord } from '@/src/types';
-import { cn } from '@/src/lib/utils';
+import { auditSecurity } from '../services/aiService';
+import { FileRecord } from '../types';
+import { cn } from '../lib/utils';
 
 interface AnalyticsDashboardProps {
   files: FileRecord[];

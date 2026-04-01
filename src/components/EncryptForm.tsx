@@ -10,9 +10,9 @@ import {
   Zap,
   ChevronDown
 } from 'lucide-react';
-import { cn } from '@/src/lib/utils';
-import { analyzePassword } from '@/src/services/aiService';
-import { encryptFile, generateSecurePassword, EncryptionType } from '@/src/services/cryptoService';
+import { cn } from '../lib/utils';
+import { analyzePassword } from '../services/aiService';
+import { encryptFile, generateSecurePassword, EncryptionType } from '../services/cryptoService';
 import { motion } from 'motion/react';
 
 interface EncryptFormProps {
