@@ -26,39 +26,40 @@ export function AuthPortal({ onLogin }: AuthPortalProps) {
   const [message, setMessage] = useState<string | null>(null);
   const [showResend, setShowResend] = useState(false);
 
-  useEffect(() => {
-    // Load Google Identity Services script
-    const script = document.createElement('script');
-    script.src = 'https://accounts.google.com/gsi/client';
-    script.async = true;
-    script.defer = true;
-    document.head.appendChild(script);
+ useEffect(() => {
+  const script = document.createElement('script');
+  script.src = 'https://accounts.google.com/gsi/client';
+  script.async = true;
+  script.defer = true;
+  document.head.appendChild(script);
 
-    script.onload = () => {
-      if (window.google) {
-        window.google.accounts.id.initialize({
-          client_id: '457661341021-1aol2pb2b6pn1in0e1ku2nk88sk22o4j.apps.googleusercontent.com',
-          callback: handleGoogleResponse,
-          auto_select: false,
-          cancel_on_tap_outside: true,
+  script.onload = () => {
+    if (window.google) {
+      window.google.accounts.id.initialize({
+        client_id: '457661341021-1aol2pb2b6pn1in0e1ku2nk88sk22o4j.apps.googleusercontent.com',
+        callback: handleGoogleResponse,
+        auto_select: false,
+        cancel_on_tap_outside: true,
+      });
+
+      const btn = document.getElementById('google-signin-btn');
+
+      if (btn) {
+        window.google.accounts.id.renderButton(btn, {
+          theme: 'outline',
+          size: 'large',
+          width: 300,
+          text: 'continue_with',
+          shape: 'rectangular',
         });
-        window.google.accounts.id.renderButton(
-          document.getElementById('google-signin-btn'),
-          { 
-            theme: 'outline', 
-            size: 'large', 
-            width: 300,
-            text: 'continue_with',
-            shape: 'rectangular'
-          }
-        );
       }
-    };
+    }
+  };
 
-    return () => {
-      document.head.removeChild(script);
-    };
-  }, []);
+  return () => {
+    document.head.removeChild(script);
+  };
+}, []);
 
   const handleGoogleResponse = async (response: any) => {
     setIsProcessing(true);
